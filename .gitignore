@@ -1,1 +1,4 @@
 models/
+.data/
+.vector_cache/
+ctextgen/__pycache__
