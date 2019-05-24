@@ -38,14 +38,24 @@ for i in range(len(data)):
         sentences.append(text[i: i + maxlen])
         next_chars.append(text[i + maxlen])
     print('nb sequences:', len(sentences))
+    if (len(sentences) == 0):
+        continue;
     # Puts sequences into X and Y matrices to be trained
     print('Vectorization...')
+    print("MAX LEN IS " + str(maxlen))
+    print("LEN CHARS IS " + str(len(chars)))
     x = np.zeros((len(sentences), maxlen, len(chars)), dtype=np.bool)
     y = np.zeros((len(sentences), len(chars)), dtype=np.bool)
+
+    print("hi")
+    print(x)
     for i, sentence in enumerate(sentences):
         for t, char in enumerate(sentence):
             x[i, t, char_indices[char]] = 1
         y[i, char_indices[next_chars[i]]] = 1
+
+    print("oof")
+    print(x)
 
 
     # Trains model
@@ -56,6 +66,9 @@ for i in range(len(data)):
     model.add(Activation('softmax'))
 
     model.compile(loss='categorical_crossentropy', optimizer='rmsprop')
+
+    print("hey got here")
+    print(x)
 
     model_history = model.fit(x, y,
               batch_size=50,
