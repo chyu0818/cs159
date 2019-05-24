@@ -47,15 +47,11 @@ for i in range(len(data)):
     x = np.zeros((len(sentences), maxlen, len(chars)), dtype=np.bool)
     y = np.zeros((len(sentences), len(chars)), dtype=np.bool)
 
-    print("hi")
-    print(x)
     for i, sentence in enumerate(sentences):
         for t, char in enumerate(sentence):
             x[i, t, char_indices[char]] = 1
         y[i, char_indices[next_chars[i]]] = 1
 
-    print("oof")
-    print(x)
 
 
     # Trains model
@@ -67,8 +63,6 @@ for i in range(len(data)):
 
     model.compile(loss='categorical_crossentropy', optimizer='rmsprop')
 
-    print("hey got here")
-    print(x)
 
     model_history = model.fit(x, y,
               batch_size=50,
