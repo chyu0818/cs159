@@ -1,6 +1,4 @@
 from collections import defaultdict
-from hmmlearn import hmm
-from hmmlearn.hmm import MultinomialHMM
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
