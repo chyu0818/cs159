@@ -5,6 +5,7 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 from itertools import chain
 import pickle
+import sklearn
 
 
 class RNN_VAE(nn.Module):
