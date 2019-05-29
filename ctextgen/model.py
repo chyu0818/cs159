@@ -4,6 +4,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.autograd import Variable
 from itertools import chain
+import pickle
 
 
 class RNN_VAE(nn.Module):
@@ -94,6 +95,10 @@ class RNN_VAE(nn.Module):
 
         self.discriminator_params = filter(lambda p: p.requires_grad, self.discriminator.parameters())
 
+        self.gaussian_prior = None
+        with open("../gmm/unsupervised_gmm.pkl", 'rb') as file:
+            self.gaussian_prior = pickle.load(file)
+
         """
         Use GPU if set
         """
@@ -140,9 +145,10 @@ class RNN_VAE(nn.Module):
         """
         Sample c ~ p(c) = Cat([0.5, 0.5])
         """
-        c = Variable(
-            torch.from_numpy(np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32'))
-        )
+        # c = Variable(
+        #     torch.from_numpy(np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32'))
+        # )
+        c = Variable(gmm.sample(1)[1][0])
         c = c.cuda() if self.gpu else c
         return c
 
