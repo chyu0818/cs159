@@ -149,27 +149,27 @@ class RNN_VAE(nn.Module):
         # c = Variable(
         # c =   torch.from_numpy(np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32'))
         # )
-        hehe = np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32')
-        print(hehe)
-        print(type(hehe))
+        # hehe = np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32')
+        # print(hehe)
+        # print(type(hehe))
 
         length = len(self.gaussian_prior.weights_)
         components = self.gaussian_prior.sample(mbsize)[1]
-        print(components)
+        # print(components)
         new_c = []
         for component in components:
-            print(component)
+            # print(component)
             temp_add = [0 for i in range(length)]
             temp_add[component] = 1
             new_c.append(temp_add)
-        print("NEW C IS")
-        print(new_c)
+        # print("NEW C IS")
+        # print(new_c)
         temp = np.array(new_c).astype('float32')
-        print(new_c)
-        print(temp)
-        print(type(temp))
+        # print(new_c)
+        # print(temp)
+        # print(type(temp))
         c = Variable(torch.from_numpy(temp))
-        print(type(Variable))
+        # print(type(Variable))
         c = c.cuda() if self.gpu else c
         return c
 
