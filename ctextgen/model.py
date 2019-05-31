@@ -147,10 +147,11 @@ class RNN_VAE(nn.Module):
         Sample c ~ p(c) = Cat([0.5, 0.5])
         """
         # c = Variable(
-        c =   torch.from_numpy(np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32'))
+        # c =   torch.from_numpy(np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32'))
         # )
-        print(c)
-        print(type(c))
+        hehe = np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32')
+        print(hehe)
+        print(type(hehe))
         temp = np.array(self.gaussian_prior.sample(1)[1][0]).astype('float32')
         print(temp)
         print(type(temp))
