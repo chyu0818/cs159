@@ -146,15 +146,15 @@ class RNN_VAE(nn.Module):
         """
         Sample c ~ p(c) = Cat([0.5, 0.5])
         """
-        c = Variable(
-            torch.from_numpy(np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32'))
-        )
+        # c = Variable(
+        c =   torch.from_numpy(np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32'))
+        # )
         print(c)
         print(type(c))
         temp = np.array(self.gaussian_prior.sample(1)[1][0])
         print(temp)
         print(type(temp))
-        c = Variable(torch.from_numpy(np.array(self.gaussian_prior.sample(1)[1][0])).astype('float32'))
+        c = Variable(temp)
         print(type(Variable))
         c = c.cuda() if self.gpu else c
         return c
