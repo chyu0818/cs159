@@ -150,6 +150,7 @@ class RNN_VAE(nn.Module):
         #     torch.from_numpy(np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32'))
         # )
         c = Variable(torch.from_numpy(np.array(self.gaussian_prior.sample(1)[1][0])))
+        print(type(Variable))
         c = c.cuda() if self.gpu else c
         return c
 
