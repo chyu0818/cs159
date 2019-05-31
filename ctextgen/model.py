@@ -152,7 +152,15 @@ class RNN_VAE(nn.Module):
         hehe = np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32')
         print(hehe)
         print(type(hehe))
-        temp = np.array(self.gaussian_prior.sample(1)[1][0]).astype('float32')
+
+        length = len(self.gaussian_prior.weights_)
+        components = self.gaussian_prior.sample(mbsize)[0]
+        new_c = []
+        for component in components:
+            temp_add = [0 for i in range(length)]
+            temp_add[component] = 1
+        temp = np.array(self.gaussian_prior.sample(mbsize)[mbsize][0]).astype('float32')
+        print(new_c)
         print(temp)
         print(type(temp))
         c = Variable(torch.from_numpy(temp))
