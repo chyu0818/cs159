@@ -157,6 +157,7 @@ class RNN_VAE(nn.Module):
         components = self.gaussian_prior.sample(mbsize)[0]
         new_c = []
         for component in components:
+            print(component)
             temp_add = [0 for i in range(length)]
             temp_add[component] = 1
         temp = np.array(self.gaussian_prior.sample(mbsize)[mbsize][0]).astype('float32')
