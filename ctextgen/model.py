@@ -154,7 +154,7 @@ class RNN_VAE(nn.Module):
         print(type(hehe))
 
         length = len(self.gaussian_prior.weights_)
-        components = self.gaussian_prior.sample(mbsize)[0]
+        components = self.gaussian_prior.sample(mbsize)[1]
         print(components)
         new_c = []
         for component in components:
