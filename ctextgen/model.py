@@ -151,10 +151,10 @@ class RNN_VAE(nn.Module):
         # )
         print(c)
         print(type(c))
-        temp = np.array(self.gaussian_prior.sample(1)[1][0])
+        temp = np.array(self.gaussian_prior.sample(1)[1][0]).astype('float32')
         print(temp)
         print(type(temp))
-        c = Variable(temp)
+        c = Variable(torch.from_numpy(temp))
         print(type(Variable))
         c = c.cuda() if self.gpu else c
         return c
