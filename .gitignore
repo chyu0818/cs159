@@ -1,3 +1,7 @@
 .data/
 .vector_cache/
 ctextgen/__pycache__
+gmm/.ipynb_checkpoints/
+gmm/.DS_Store
+rnn/
+venv/
