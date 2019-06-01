@@ -147,7 +147,8 @@ class RNN_VAE(nn.Module):
         Sample c ~ p(c) = Cat([0.5, 0.5])
         """
         # c = Variable(
-        # c =   torch.from_numpy(np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32'))
+        # c =   torch.from_numpy(np.random.multinomial(1, [0.5, 0.5], 
+        # mbsize).astype('float32'))
         # )
         # hehe = np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32')
         # print(hehe)
