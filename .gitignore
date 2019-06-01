@@ -5,3 +5,4 @@ gmm/.ipynb_checkpoints/
 gmm/.DS_Store
 rnn/
 venv/
+.DS_Store
