@@ -65,7 +65,7 @@ for i in range(int(args.num_sentences)):
     c = model.sample_c_prior(1)
     print(c_dim)
 
-    _, c_idx = torch.max(c, dim=1)
+    _, c_idx = torch.max(c, dim=7)
     sample_idxs = model.sample_sentence(z, c, temp=0.1)
 
     print('\nSentiment: {}'.format(dataset.idx2label(int(c_idx))))
