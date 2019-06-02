@@ -51,9 +51,9 @@ model = RNN_VAE(
 )
 
 if args.gpu:
-    model.load_state_dict(torch.load(''.format(args.path)))
+    model.load_state_dict(torch.load('{}'.format(args.path)))
 else:
-    model.load_state_dict(torch.load(''.format(args.path), map_location=lambda storage, loc: storage))
+    model.load_state_dict(torch.load('{}'.format(args.path), map_location=lambda storage, loc: storage))
 
 # Samples latent and conditional codes randomly from prior
 z = model.sample_z_prior(1)
