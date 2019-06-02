@@ -171,9 +171,9 @@ class RNN_VAE(nn.Module):
         new_c = []
         #for component in components:
             # print(component)
-       temp_add = [0 for i in range(length)]
-       temp_add[component] = 1
-       new_c.append(temp_add)
+        temp_add = [0 for i in range(length)]
+        temp_add[component] = 1
+        new_c.append(temp_add)
         # print("NEW C IS")
         # print(new_c)
         temp = np.array(new_c).astype('float32')
