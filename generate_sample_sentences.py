@@ -63,6 +63,7 @@ for i in range(int(args.num_sentences)):
     # sample z, c prior
     z = model.sample_z_prior(1)
     c = model.sample_c_prior(1)
+    print(c_dim)
 
     _, c_idx = torch.max(c, dim=1)
     sample_idxs = model.sample_sentence(z, c, temp=0.1)
