@@ -59,8 +59,8 @@ else:
 z = model.sample_z_prior(1)
 c = model.sample_c_prior(1)
 
-# Generate positive sample given z
-c[0, 0], c[0, 1] = 1, 0
+# Generate mean sample given z
+c[0, 0] = 0
 
 _, c_idx = torch.max(c, dim=1)
 sample_idxs = model.sample_sentence(z, c, temp=0.1)
