@@ -69,6 +69,8 @@ for i in range(int(args.num_sentences)):
     sample_idxs = model.sample_sentence(z, c, temp=0.1)
 
     # print('\nSentiment: {}'.format(dataset.idx2label(int(c_idx))))
+    print("SENTIMENT IS")
+    print(c)
     print('Generated: {}'.format(dataset.idxs2sentence(sample_idxs)))
 
 
