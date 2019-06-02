@@ -58,7 +58,7 @@ else:
 
 
 # go through `num_sentences`
-for i in range(args.num_sentences):
+for i in range(int(args.num_sentences)):
 
     # sample z, c prior
     z = model.sample_z_prior(1)
