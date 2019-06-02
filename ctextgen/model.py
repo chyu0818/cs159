@@ -97,7 +97,7 @@ class RNN_VAE(nn.Module):
         self.discriminator_params = filter(lambda p: p.requires_grad, self.discriminator.parameters())
 
         self.gaussian_prior = None
-        with open("gmm/gmm_unsupervised.pkl", 'rb') as file:
+        with open("gmm/gmm_unsupervised_7_emotions.pkl", 'rb') as file:
             self.gaussian_prior = pickle.load(file)
 
         """
