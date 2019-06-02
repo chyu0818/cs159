@@ -69,7 +69,7 @@ print('\nSentiment: {}'.format(dataset.idx2label(int(c_idx))))
 print('Generated: {}'.format(dataset.idxs2sentence(sample_idxs)))
 
 # Generate negative sample from the same z
-c[0, 0], c[0, 1] = 0, 1
+c[0, 0] = 0
 
 _, c_idx = torch.max(c, dim=1)
 sample_idxs = model.sample_sentence(z, c, temp=0.8)
