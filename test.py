@@ -24,6 +24,8 @@ parser.add_argument('--gpu', default=False, action='store_true',
                     help='whether to run in the GPU')
 parser.add_argument('--model', default='ctextgen', metavar='',
                     help='choose the model: {`vae`, `ctextgen`}, (default: `ctextgen`)')
+parser.add_argument('--path', default='saved_models/baseline_vae.bin',
+                    metavar='', help='choose the model: from saved_models, (default: `baseline_vae`)')
 
 args = parser.parse_args()
 
@@ -36,7 +38,7 @@ lr_decay_every = 1000000
 n_iter = 20000
 log_interval = 1000
 z_dim = h_dim
-c_dim = 2
+c_dim = 1
 
 dataset = SST_Dataset()
 
@@ -49,9 +51,9 @@ model = RNN_VAE(
 )
 
 if args.gpu:
-    model.load_state_dict(torch.load('models/{}.bin'.format(args.model)))
+    model.load_state_dict(torch.load('models/{}.bin'.format(args.path)))
 else:
-    model.load_state_dict(torch.load('models/{}.bin'.format(args.model), map_location=lambda storage, loc: storage))
+    model.load_state_dict(torch.load('models/{}.bin'.format(args.path), map_location=lambda storage, loc: storage))
 
 # Samples latent and conditional codes randomly from prior
 z = model.sample_z_prior(1)
