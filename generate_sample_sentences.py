@@ -26,6 +26,7 @@ parser.add_argument('--model', default='ctextgen', metavar='',
                     help='choose the model: {`vae`, `ctextgen`}, (default: `ctextgen`)')
 parser.add_argument('--path', default='saved_models/baseline_vae.bin',
                     metavar='', help='choose the model: from saved_models, (default: `baseline_vae`)')
+parser.add_argument('--num_sentences', default='10')
 
 args = parser.parse_args()
 
@@ -38,7 +39,7 @@ lr_decay_every = 1000000
 n_iter = 20000
 log_interval = 1000
 z_dim = h_dim
-c_dim = 7
+c_dim = 1
 
 dataset = SST_Dataset()
 
@@ -55,51 +56,26 @@ if args.gpu:
 else:
     model.load_state_dict(torch.load('{}'.format(args.path), map_location=lambda storage, loc: storage))
 
-# Samples latent and conditional codes randomly from prior
-z = model.sample_z_prior(1)
-c = model.sample_c_prior(1)
 
-# Generate mean sample given z
-c[0, 0] = 0
+# go through `num_sentences`
+for i in range(int(args.num_sentences)):
 
-_, c_idx = torch.max(c, dim=1)
-sample_idxs = model.sample_sentence(z, c, temp=0.1)
+    # sample z, c prior
+    z = model.sample_z_prior(1)
+    c = model.sample_c_prior(1)
 
-print('\nSentiment: {}'.format(dataset.idx2label(int(c_idx))))
-print('Generated: {}'.format(dataset.idxs2sentence(sample_idxs)))
-
-# Generate negative sample from the same z
-c[0, 0] = 0
-
-_, c_idx = torch.max(c, dim=1)
-sample_idxs = model.sample_sentence(z, c, temp=0.8)
-
-print('\nSentiment: {}'.format(dataset.idx2label(int(c_idx))))
-print('Generated: {}'.format(dataset.idxs2sentence(sample_idxs)))
-
-print()
-
-# Interpolation
-c = model.sample_c_prior(1)
-
-z1 = model.sample_z_prior(1).view(1, 1, z_dim)
-z1 = z1.cuda() if args.gpu else z1
-
-z2 = model.sample_z_prior(1).view(1, 1, z_dim)
-z2 = z2.cuda() if args.gpu else z2
-
-# Interpolation coefficients
-alphas = np.linspace(0, 1, 5)
-
-print('Interpolation of z:')
-print('-------------------')
-
-for alpha in alphas:
-    z = float(1-alpha)*z1 + float(alpha)*z2
-
+    _, c_idx = torch.max(c, dim=1)
     sample_idxs = model.sample_sentence(z, c, temp=0.1)
-    sample_sent = dataset.idxs2sentence(sample_idxs)
 
-    print("{}".format(sample_sent))
+    print('\nSentiment: {}'.format(dataset.idx2label(int(c_idx))))
+    print('Generated: {}'.format(dataset.idxs2sentence(sample_idxs)))
 
-print()
+
+
+
+
+
+
+
+
+

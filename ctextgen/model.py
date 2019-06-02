@@ -97,7 +97,7 @@ class RNN_VAE(nn.Module):
         self.discriminator_params = filter(lambda p: p.requires_grad, self.discriminator.parameters())
 
         self.gaussian_prior = None
-        with open("gmm/gmm_unsupervised.pkl", 'rb') as file:
+        with open("gmm/unsupervised_7_emotions.pkl", 'rb') as file:
             self.gaussian_prior = pickle.load(file)
 
         """
@@ -147,13 +147,14 @@ class RNN_VAE(nn.Module):
         Sample c ~ p(c) = Cat([0.5, 0.5])
         """
 
-        temp = np.random.normal(0, 1, mbsize).astype('float32')
-        temparray = []
-        for i in temp:
-            newtemp = [i]
-            temparray.append(newtemp)
-        temparray = np.array(temparray)
-        c = Variable(torch.from_numpy(temparray))
+        # temp = np.random.normal(0, 1, mbsize).astype('float32')
+        # temparray = []
+        # for i in temp:
+        #     newtemp = [i]
+        #     temparray.append(newtemp)
+        # temparray = np.array(temparray)
+        # print(temparray)
+        # c = Variable(torch.from_numpy(temparray))
 
         # c = Variable(
         # c =   torch.from_numpy(np.random.multinomial(1, [0.5, 0.5], 
@@ -164,22 +165,22 @@ class RNN_VAE(nn.Module):
         # print(hehe)
         # print(type(hehe))
 
-        #length = len(self.gaussian_prior.weights_)
-        #components = self.gaussian_prior.sample(mbsize)[1]
+        length = len(self.gaussian_prior.weights_)
+        components = self.gaussian_prior.sample(mbsize)[1]
         # print(components)
-        #new_c = []
-        #for component in components:
+        new_c = []
+        for component in components:
             # print(component)
-        #    temp_add = [0 for i in range(length)]
-        #    temp_add[component] = 1
-        #    new_c.append(temp_add)
+            temp_add = [0 for i in range(length)]
+            temp_add[component] = 1
+            new_c.append(temp_add)
         # print("NEW C IS")
         # print(new_c)
-        #temp = np.array(new_c).astype('float32')
+        temp = np.array(new_c).astype('float32')
         # print(new_c)
         # print(temp)
         # print(type(temp))
-        #c = Variable(torch.from_numpy(temp))
+        c = Variable(torch.from_numpy(temp))
         # print(type(Variable))
         c = c.cuda() if self.gpu else c
         return c
