@@ -24,7 +24,7 @@ parser.add_argument('--gpu', default=False, action='store_true',
                     help='whether to run in the GPU')
 parser.add_argument('--model', default='ctextgen', metavar='',
                     help='choose the model: {`vae`, `ctextgen`}, (default: `ctextgen`)')
-parser.add_argument('--path', default='saved_models/baseline_vae.bin',
+parser.add_argument('--path', default='saved_models/unsupervised_7_emotion_rnn.bin',
                     metavar='', help='choose the model: from saved_models, (default: `baseline_vae`)')
 parser.add_argument('--num_sentences', default='10')
 
@@ -63,11 +63,14 @@ for i in range(int(args.num_sentences)):
     # sample z, c prior
     z = model.sample_z_prior(1)
     c = model.sample_c_prior(1)
+    print(c_dim)
 
     _, c_idx = torch.max(c, dim=1)
     sample_idxs = model.sample_sentence(z, c, temp=0.1)
 
-    print('\nSentiment: {}'.format(dataset.idx2label(int(c_idx))))
+    # print('\nSentiment: {}'.format(dataset.idx2label(int(c_idx))))
+    print("SENTIMENT IS")
+    print(c)
     print('Generated: {}'.format(dataset.idxs2sentence(sample_idxs)))
 
 
