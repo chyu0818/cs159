@@ -24,7 +24,7 @@ parser.add_argument('--gpu', default=False, action='store_true',
                     help='whether to run in the GPU')
 parser.add_argument('--model', default='ctextgen', metavar='',
                     help='choose the model: {`vae`, `ctextgen`}, (default: `ctextgen`)')
-parser.add_argument('--path', default='saved_models/emotions_7_tfidf_wordvec.bin',
+parser.add_argument('--path', default='saved_models/tfidf_7_emotion_gmm_wordvec.bin',
                     metavar='', help='choose the model: from saved_models, (default: `baseline_vae`)')
 parser.add_argument('--num_sentences', default='10')
 
