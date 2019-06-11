@@ -1,0 +1,60 @@
+Iter-0; Loss: 8.5252; Recon: 8.5216; KL: 0.3551; Grad_norm: 0.0000;
+Sample: "each tradition ms. junk star credit poo a display small afraid rises warmth jostles ivans"
+
+Iter-1000; Loss: 3.8236; Recon: 3.7918; KL: 3.1821; Grad_norm: 0.0000;
+Sample: "'s heartfelt meal poetic pretty 1952 outstanding his atmosphere ."
+
+Iter-2000; Loss: 3.1578; Recon: 3.1100; KL: 4.7756; Grad_norm: 0.0000;
+Sample: "reason it 's not is as been lohman and quick ."
+
+Iter-3000; Loss: 2.9700; Recon: 2.8984; KL: 7.1673; Grad_norm: 0.0000;
+Sample: "it confront quietly fun ."
+
+Iter-4000; Loss: 2.9446; Recon: 2.8167; KL: 7.0206; Grad_norm: 0.0000;
+Sample: "depressingly poo and manufactured everyone ."
+
+Iter-5000; Loss: 2.3516; Recon: 2.2152; KL: 5.1528; Grad_norm: 0.0000;
+Sample: "bottom - joke is a movie , tunney it is tough to trod decent drama"
+
+Iter-6000; Loss: 2.2654; Recon: 2.0988; KL: 4.8028; Grad_norm: 0.0000;
+Sample: "michel hill 's no matter the film is n't engulfed unwavering and asleep ."
+
+Iter-7000; Loss: 2.1907; Recon: 2.0184; KL: 4.0142; Grad_norm: 0.0000;
+Sample: "tedious by all life ."
+
+Iter-8000; Loss: 2.3921; Recon: 2.1732; KL: 4.2771; Grad_norm: 0.0000;
+Sample: "well - sidedness james powers and exceptionally wasted ..."
+
+Iter-9000; Loss: 2.4175; Recon: 2.1834; KL: 3.9414; Grad_norm: 0.0000;
+Sample: "strange and surprising blade - hearted ."
+
+Iter-10000; Loss: 2.4719; Recon: 2.2361; KL: 3.4861; Grad_norm: 0.0000;
+Sample: "the stand - idea such an show ."
+
+Iter-11000; Loss: 2.0714; Recon: 1.8267; KL: 3.2252; Grad_norm: 0.0000;
+Sample: "lazy staggeringly dreadful ..."
+
+Iter-12000; Loss: 2.0051; Recon: 1.7560; KL: 2.9613; Grad_norm: 0.0000;
+Sample: "in fact , very touching , not hope as eerie man 's pretty stupid"
+
+Iter-13000; Loss: 2.0769; Recon: 1.8311; KL: 2.6613; Grad_norm: 0.0000;
+Sample: "... nearly me for its seriousness and city in the material ."
+
+Iter-14000; Loss: 2.2887; Recon: 2.0351; KL: 2.5217; Grad_norm: 0.0000;
+Sample: "fantastic ."
+
+Iter-15000; Loss: 2.4316; Recon: 2.2020; KL: 2.1108; Grad_norm: 0.0000;
+Sample: "offers an comic even one of the movies ."
+
+Iter-16000; Loss: 1.9922; Recon: 1.8001; KL: 1.6414; Grad_norm: 0.0000;
+Sample: "an gently - girl -- even more sexy , shot on obvious game ."
+
+Iter-17000; Loss: 2.1388; Recon: 1.9049; KL: 1.8668; Grad_norm: 0.0000;
+Sample: "it merely fascinating story that ."
+
+Iter-18000; Loss: 1.9813; Recon: 1.8099; KL: 1.2833; Grad_norm: 0.0000;
+Sample: "a very capable nailbiter ."
+
+Iter-19000; Loss: 2.0144; Recon: 1.8455; KL: 1.1917; Grad_norm: 0.0000;
+Sample: "you 'll love to the distinct impression that mild than involving piffle ."
+

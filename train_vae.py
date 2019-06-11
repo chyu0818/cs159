@@ -35,7 +35,7 @@ lr_decay_every = 1000000
 n_iter = 20000
 log_interval = 1000
 z_dim = h_dim
-c_dim = 7
+c_dim = 1
 
 dataset = SST_Dataset()
 

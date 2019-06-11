@@ -153,7 +153,7 @@ class RNN_VAE(nn.Module):
             newtemp = [i]
             temparray.append(newtemp)
         temparray = np.array(temparray)
-        print(temparray)
+        #print(temparray)
         c = Variable(torch.from_numpy(temparray))
 
         # c = Variable(
