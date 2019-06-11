@@ -24,7 +24,7 @@ parser.add_argument('--gpu', default=False, action='store_true',
                     help='whether to run in the GPU')
 parser.add_argument('--model', default='ctextgen', metavar='',
                     help='choose the model: {`vae`, `ctextgen`}, (default: `ctextgen`)')
-parser.add_argument('--path', default='saved_models/tfidf_7_emotion_gmm_wordvec.bin',
+parser.add_argument('--path', default='saved_models/FINAL_baseline.bin',
                     metavar='', help='choose the model: from saved_models, (default: `baseline_vae`)')
 parser.add_argument('--num_sentences', default='10')
 
@@ -39,7 +39,7 @@ lr_decay_every = 1000000
 n_iter = 20000
 log_interval = 1000
 z_dim = h_dim
-c_dim = 7
+c_dim = 1
 
 dataset = SST_Dataset()
 
