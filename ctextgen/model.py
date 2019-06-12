@@ -163,7 +163,7 @@ class RNN_VAE(nn.Module):
 
         # hehe = np.random.multinomial(1, [0.5, 0.5], mbsize).astype('float32')
 
-        # length = len(self.gaussian_prior.weights_)
+        length = len(self.gaussian_prior.weights_)
         components = self.gaussian_prior.sample(mbsize)[1]
         new_c = []
         for component in components:

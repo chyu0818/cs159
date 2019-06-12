@@ -1,0 +1,60 @@
+Iter-0; Loss: 8.4070; Recon: 8.4021; KL: 0.4881; Grad_norm: 0.0000;
+Sample: "bugged daft boomers laid comics compellingly unexamined extraordinarily psychodramatics difference label locale mood manages nanette"
+
+Iter-1000; Loss: 3.8688; Recon: 3.8413; KL: 2.7555; Grad_norm: 0.0000;
+Sample: "ben by could ingenious remember ,"
+
+Iter-2000; Loss: 3.5830; Recon: 3.5332; KL: 4.9782; Grad_norm: 0.0000;
+Sample: "'s -rrb- laughable and study try the year ."
+
+Iter-3000; Loss: 2.9991; Recon: 2.9157; KL: 8.3432; Grad_norm: 0.0000;
+Sample: "you will love we , airless action war action ."
+
+Iter-4000; Loss: 2.9580; Recon: 2.8440; KL: 6.2544; Grad_norm: 0.0000;
+Sample: "originality has worked the basis was impressive ."
+
+Iter-5000; Loss: 2.6900; Recon: 2.5408; KL: 5.6372; Grad_norm: 0.0000;
+Sample: "eyre is the most inside up in manically supporting timing ."
+
+Iter-6000; Loss: 2.5509; Recon: 2.3855; KL: 4.7688; Grad_norm: 0.0000;
+Sample: "the film looks from the experience are than a long ."
+
+Iter-7000; Loss: 2.1584; Recon: 1.9844; KL: 4.0542; Grad_norm: 0.0000;
+Sample: "its chocolate factory with depression ."
+
+Iter-8000; Loss: 2.3970; Recon: 2.1918; KL: 4.0103; Grad_norm: 0.0000;
+Sample: "funny laughs"
+
+Iter-9000; Loss: 2.4320; Recon: 2.2399; KL: 3.2341; Grad_norm: 0.0000;
+Sample: "shafer 's the movie as entertaining , little off the new grace"
+
+Iter-10000; Loss: 2.0333; Recon: 1.7951; KL: 3.5223; Grad_norm: 0.0000;
+Sample: "an infinitely wittier engorged and politically potent standardized of celebrity ."
+
+Iter-11000; Loss: 2.0172; Recon: 1.7730; KL: 3.2177; Grad_norm: 0.0000;
+Sample: "in it finds it 's hell , swimfan anyway"
+
+Iter-12000; Loss: 2.1271; Recon: 1.8880; KL: 2.8435; Grad_norm: 0.0000;
+Sample: "a strong picture ."
+
+Iter-13000; Loss: 2.5772; Recon: 2.3438; KL: 2.5281; Grad_norm: 0.0000;
+Sample: "a one portrait of musical constant tale of the year ."
+
+Iter-14000; Loss: 1.8790; Recon: 1.6221; KL: 2.5539; Grad_norm: 0.0000;
+Sample: "smart , surreal , rather shot through under - rendered solutions ."
+
+Iter-15000; Loss: 1.8126; Recon: 1.5944; KL: 2.0053; Grad_norm: 0.0000;
+Sample: "this insufferable lives about the urbane sweetness that sophisticated wit and too long ."
+
+Iter-16000; Loss: 2.0043; Recon: 1.7798; KL: 1.9175; Grad_norm: 0.0000;
+Sample: "a low - minded snoozer ."
+
+Iter-17000; Loss: 2.0379; Recon: 1.8191; KL: 1.7462; Grad_norm: 0.0000;
+Sample: "pipe dream does n't expect from josh giants ."
+
+Iter-18000; Loss: 1.9034; Recon: 1.7229; KL: 1.3516; Grad_norm: 0.0000;
+Sample: "it 's the quirky , is visually ..."
+
+Iter-19000; Loss: 1.8810; Recon: 1.6791; KL: 1.4245; Grad_norm: 0.0000;
+Sample: "... the whole gained ."
+
